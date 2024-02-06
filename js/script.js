@@ -44,7 +44,7 @@ function handleYesClick() {
     
     // Tempatkan kode yang ingin dijalankan setiap 1 detik di sini
     // console.log("Loop berjalan setiap 1 detik");
-    catImg.src = gif[gifCount];
+    catImg.src = 'img/cat-yes.img';
     gifCount++
     if(gifCount == 4){
       gifCount =0
