@@ -31,10 +31,10 @@ noButton.addEventListener("click", function () {
 
 function handleYesClick() {
   const gif = [
-    `valentine/gif/1.gif`,
-    `valentine/gif/2.gif`,
-    `valentine/gif/3.gif`,
-    `valentine/gif/4.gif`
+    `gif/1.gif`,
+    `gif/2.gif`,
+    `gif/3.gif`,
+    `gif/4.gif`
   ]
   titleElement.innerHTML = "Yayyy!! :3";
   buttonsContainer.classList.add("hidden");
@@ -44,7 +44,7 @@ function handleYesClick() {
     
     // Tempatkan kode yang ingin dijalankan setiap 1 detik di sini
     // console.log("Loop berjalan setiap 1 detik");
-    catImg.src = 'img/cat-yes.img';
+    catImg.src = gif[gifCount];
     gifCount++
     if(gifCount == 4){
       gifCount =0
