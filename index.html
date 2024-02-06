@@ -14,11 +14,8 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap"
-      rel="stylesheet"
-    />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet" />
 	<link href="css/default.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/garden.js"></script>
@@ -50,7 +47,7 @@
 
 	<div id="nextPage" class="container" style="display: none;">
 		<div class="row">
-			<div class="col-md-6 offset-md-3 text-center"> <!-- Menggunakan kolom grid medium 6 dengan offset tengah -->
+			<div class="col-md-6 offset-md-3 text-center">
 				<img class="cat-img" src="img/cat-0.jpg" alt="Picture of a cat" />
 				<p class="title">Will you be my Valentine?</p>
 				<div class="buttons">
@@ -60,10 +57,11 @@
 			</div>
 		</div>
 	</div>
-	<audio autoplay loop>
+	<audio id="backgroundAudio" loop>
 		<source src="../audio/index.mp3" type="audio/mpeg">
 		Your browser does not support the audio element.
 	</audio>
+	<!-- <audio src="../audio/index.mp3" autoplay></audio> -->
 
 	<script type="module" src="../js/script.js"></script>
 	<script type="text/javascript">
@@ -107,7 +105,18 @@
 			adjustCodePosition();
 			$("#code").typewriter();
 		}
+
+		function startAudioWithDelay() {
+			const audio = document.getElementById('backgroundAudio');
+			setTimeout(function () {
+				audio.play();
+			}, 3000); // Delay 3 detik sebelum memulai audio
+		}
+
+		// Panggil fungsi startAudioWithDelay setelah halaman dimuat
+		window.onload = startAudioWithDelay;
 	</script>
+
 </body>
 
 </html>
