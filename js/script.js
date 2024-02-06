@@ -31,10 +31,10 @@ noButton.addEventListener("click", function () {
 
 function handleYesClick() {
   const gif = [
-    '../gif/1.gif',
-    '../gif/2.gif',
-    '../gif/3.gif',
-    '../gif/4.gif'
+    'gif/1.gif',
+    'gif/2.gif',
+    'gif/3.gif',
+    'gif/4.gif'
   ]
   titleElement.innerHTML = "Yayyy!! :3";
   buttonsContainer.classList.add("hidden");
